@@ -1,0 +1,17 @@
+<ng-container *ngTemplateOutlet="inputConfig['text'] ? text : textarea">
+</ng-container>
+
+<!-- Text Input -->
+<ng-template #text>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" [attr.placeholder]="inputConfig.attr.placeholder" 
+            [attr.aria-label]="inputConfig.attr.placeholder" aria-describedby="basic-addon1">
+    </div>
+</ng-template>
+
+<!-- Text Area Input -->
+<ng-template #textarea>
+    <div class="input-group">
+        <textarea class="form-control" placeholder="Descripcion" aria-label="With textarea"></textarea>
+    </div>
+</ng-template>
